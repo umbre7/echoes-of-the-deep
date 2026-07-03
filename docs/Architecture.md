@@ -15,10 +15,10 @@ Objectif : pouvoir remplacer intégralement la couche de présentation (console 
 
 ## 2. Modules
 
-| Module   | Rôle                                        | Statut                                 |
-|----------|---------------------------------------------|----------------------------------------|
-| `core`   | Logique de jeu (moteur, combat, entités...) | Actif dès maintenant                   |
-| `lwjgl3` | Rendu / plateforme desktop (LibGDX)         | Pas touché avant la fin du prototypage |
+| Module | Rôle | Statut |
+|---|---|---|
+| `core` | Logique de jeu (moteur, combat, entités...) | Actif dès maintenant |
+| `lwjgl3` | Rendu / plateforme desktop (LibGDX) | Pas touché avant la fin du prototypage |
 
 ## 3. Découpage interne du `core` (proposition de packages)
 
@@ -37,14 +37,16 @@ core/
 
 Ce découpage n'est pas figé, il évoluera au fur et à mesure qu'on écrira les premières classes. L'idée est surtout de garder chaque système dans son propre package, avec des dépendances qui vont plutôt dans un sens (`combat` dépend de `entity`, pas l'inverse, etc.).
 
+**Note** : pas de package `village`/`hub`/`meta` pour l'instant, volontairement, ce système dépend de mécaniques (persistance, économie) qu'on n'a pas encore. À concevoir en Phase 6, une fois qu'on saura concrètement ce dont il a besoin (cf. Roadmap.md).
+
 ## 4. Systèmes principaux (rappel du découpage fonctionnel)
 
 - **Entity System** : représentation des personnages/monstres (stats, position sur la grille, état).
 - **Action System** : ce qu'une entité peut faire à son tour (se déplacer, attaquer, compétence, objet, passer).
 - **Turn / Initiative System** : ordre de passage basé sur la vitesse, file d'initiative globale (héros + alliés + ennemis).
-- **Combat Engine** : orchestre un combat, démarre la file d'initiative, distribue les tours, applique les actions, détecte fin de combat.
+- **Combat Engine** : orchestre un combat : démarre la file d'initiative, distribue les tours, applique les actions, détecte fin de combat.
 - **World Grid System** : grille de coordonnées, calcul de distance/portée, base pour les AOE futures.
-- **AI System** : logique de décision pour les alliés (et plus tard les ennemis), suivi, ciblage, choix d'action.
+- **AI System** : logique de décision pour les alliés (et plus tard les ennemis) : suivi, ciblage, choix d'action.
 
 ## 5. Stratégie de test
 
@@ -57,7 +59,7 @@ Quand la logique sera stabilisée :
 
 - `lwjgl3` (et à terme d'autres launchers) consommera `core` comme une librairie.
 - Une couche d'adaptation traduira les états du moteur (`core`) en rendu (sprites, grille visuelle, UI), cette couche ne contiendra **aucune règle de jeu**, uniquement de l'affichage et de la capture d'input.
-- **TBD** : structure exacte de cette couche d'adaptation (Screen dédié, pattern MVC/MVP...), à concevoir le moment venu, pas maintenant.
+- **TBD** : structure exacte de cette couche d'adaptation (Screen dédié, pattern MVC/MVP...) à concevoir le moment venu, pas maintenant.
 
 ## 7. Organisation Git (rappel)
 

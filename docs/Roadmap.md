@@ -5,7 +5,7 @@
 ## Phase 0 : Setup
 
 - [x] Squelette LibGDX généré (gdx-liftoff)
-- [ ] Structure de packages `core` mise en place (`entity`, `combat`, `action`, `turn`, `grid`, `ai`, `debug`, `engine`)
+- [x] Structure de packages `core` mise en place (`entity`, `combat`, `action`, `turn`, `grid`, `ai`, `debug`, `engine`)
 - [x] Docs de base (README, GDD, Architecture, Roadmap, Ideas)
 
 ## Phase 1 : Prototype du moteur de combat
