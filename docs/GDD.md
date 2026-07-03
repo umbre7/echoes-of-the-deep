@@ -11,7 +11,7 @@ Piliers de gameplay :
 - **Lisibilité** : peu d'entités à gérer en même temps (1 héros + 2-3 alliés), pour garder chaque combat clair.
 - **Persistance douce** : la mort punit (perte partielle d'or/loot) sans effacer la progression du joueur.
 
-**Ton et univers** : cadre medieval fantasy (royaumes, chevaliers, magie intégrée au monde) avec une ambiance sombre et dure : danger réel, enjeux moraux gris, pas de médiéval fantasy "conte de fées". **TBD** : direction artistique précise, lore détaillé (factions, histoire du monde, nature des donjons/créatures).
+**Ton et univers** : cadre medieval fantasy (royaumes, chevaliers, magie intégrée au monde) avec une ambiance sombre et dure avec des dangers réels, enjeux moraux gris, pas de médiéval fantasy "conte de fées". **TBD** : direction artistique précise, lore détaillé (factions, histoire du monde, nature des donjons/créatures).
 
 ## 2. Boucle de jeu
 
@@ -34,6 +34,9 @@ Village (hub) → Préparation (équipement, équipe) → Expédition en donjon 
     - utiliser une compétence
     - utiliser un objet
     - passer son tour
+- L'ordre est **recalculé à chaque round** (pas figé pour tout le combat), pour que les effets qui modifient la vitesse (compétences, objets) aient un impact dès le round suivant.
+- En cas d'égalité de vitesse entre plusieurs entités, l'ordre entre elles est tiré aléatoirement, et ce tirage est refait à chaque round.
+- **Note d'architecture (Phase 4)** : dès que des effets modifiant la vitesse existeront, `Entity` aura probablement besoin d'une distinction entre `baseSpeed` (valeur de référence) et une vitesse effective temporairement modifiée, même principe que `maxHealth`/`currentHealth`. Pas nécessaire pour la Phase 1.
 
 ### 3.3 Zones d'effet (AOE) : prévu, pas dans la v1
 
