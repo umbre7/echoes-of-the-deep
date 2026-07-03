@@ -15,10 +15,10 @@ Objectif : pouvoir remplacer intégralement la couche de présentation (console 
 
 ## 2. Modules
 
-| Module | Rôle | Statut |
-|---|---|---|
-| `core` | Logique de jeu (moteur, combat, entités...) | Actif dès maintenant |
-| `lwjgl3` | Rendu / plateforme desktop (LibGDX) | Pas touché avant la fin du prototypage |
+| Module   | Rôle                                        | Statut                                 |
+|----------|---------------------------------------------|----------------------------------------|
+| `core`   | Logique de jeu (moteur, combat, entités...) | Actif dès maintenant                   |
+| `lwjgl3` | Rendu / plateforme desktop (LibGDX)         | Pas touché avant la fin du prototypage |
 
 ## 3. Découpage interne du `core` (proposition de packages)
 
