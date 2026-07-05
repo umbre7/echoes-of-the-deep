@@ -125,6 +125,14 @@ public class Entity {
         return this.currentHealth;
     }
 
+    /**
+     * Renvoie la vitesse actuelle de l'entité.
+     * @return un int correspondant à la vitesse actuelle de l'entité.
+     */
+    public int getCurrentSpeed() {
+        return currentSpeed;
+    }
+
     // ========== Méthodes ==========
 
     /**
