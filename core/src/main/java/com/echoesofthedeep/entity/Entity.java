@@ -27,6 +27,9 @@ public class Entity {
     /** La vitesse de base de l'entité. */
     private int baseSpeed;
 
+    /** La vitesse actuelle de l'entité. */
+    private int currentSpeed;
+
     /** Le niveau de l'entité. */
     private int level;
 
@@ -51,6 +54,7 @@ public class Entity {
         this.baseAttack = attack;
         this.baseDefense = defense;
         this.baseSpeed = speed;
+        this.currentSpeed = speed;
         this.level = 1;
         this.xp = 0;
     }
