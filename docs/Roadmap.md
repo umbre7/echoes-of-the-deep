@@ -10,8 +10,8 @@
 
 ## Phase 1 : Prototype du moteur de combat
 
-- [ ] Classe `Entity` de base (identité, stats minimales, vitesse)
-- [ ] Système d'initiative (tri par vitesse, file de tour)
+- [x] Classe `Entity` de base (identité, stats minimales, vitesse)
+- [x] Système d'initiative (tri par vitesse, file de tour)
 - [ ] Boucle de combat minimale : deux entités, une attaque simple, résolution des dégâts
 - [ ] Affichage console du déroulement d'un combat (debug)
 - [ ] Tests unitaires sur l'ordre d'initiative et la résolution d'attaque

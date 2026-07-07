@@ -27,6 +27,7 @@
 - Éditeur de donjon fait main (pour accélérer la création de contenu manuel en Phase 5)
 - Système de sauvegarde/chargement
 - Support manette (en plus clavier/souris) une fois la migration LibGDX faite
+- Question ouverte : le tour par tour s'applique-t-il uniquement au combat (TurnManager scopé aux participants d'un combat, ce qui est l'hypothèse actuelle), ou est-ce que d'autres entités de l'étage (qui ramassent du loot, se déplacent, etc.) doivent aussi être prises en compte pendant qu'un combat se déroule ailleurs ? Si oui, il faudra une couche d'orchestration au-dessus de TurnManager (probablement dans engine), sans changer TurnManager lui-même. À trancher quand on abordera le système de donjon (Phase 5) — pas avant.
 
 ## Hors scope confirmé (rappel du GDD)
 
