@@ -2,6 +2,10 @@ package com.echoesofthedeep.entity;
 
 /**
  * Classe représentant une Entité.
+ * <p>Cette classe regroupe l'identité et les statistiques de l'entité (héros, alliés IA ou ennemis, PNJ dans une version future).</p>
+ * <p>On distingue les statistiques de base (maxHealth, baseSpeed) des statistiques actuelles
+ * (currentHealth, currentSpeed) car dans une version future, des objets et effets pourront
+ * modifier les statistiques de l'entité.</p>
  *
  * @author Arthur
  */
