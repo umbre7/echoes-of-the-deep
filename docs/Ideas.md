@@ -9,6 +9,9 @@
 - Objets/équipements avec effets passifs
 - Ennemis avec IA plus élaborée (patterns, phases de boss)
 - Système de craft léger au village
+- PNJ neutres (NEUTRAL) dans les donjons : marchands entourés d'items au sol proposés à la vente (le joueur/allié choisit de les ramasser ou non) ; si un item du marchand est
+    ramassé, il devient hostile (passe en ENEMY) et peut alors être attaqué. D'autres neutres imaginables : PNJ à secourir (pas de PV/pas de camp de combat classique).
+    Question ouverte : mécanisme exact de "devenir hostile" et d'objets au sol, à concevoir en Phase 4/5.
 
 ## Contenu
 
